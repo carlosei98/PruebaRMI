@@ -1,12 +1,12 @@
+package com.erena.RMIServer;
+
 import java.rmi.RemoteException;
-import java.rmi.registry.LocateRegistry;
-import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.Random;
 
 public class InterfazRemota_Impl extends UnicastRemoteObject implements InterfazRemota {
     protected InterfazRemota_Impl() throws RemoteException {
-        super();
+        super(5099);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class InterfazRemota_Impl extends UnicastRemoteObject implements Interfaz
     }
 
     @Override
-    public int randomNumber() throws RemoteException {
+    public int randomNumber() {
         return new Random().nextInt(Integer.MAX_VALUE);
         // Podemos poner return 1; para comprobar que efectivamente, se obtiene el valor entrando en este método remoto.
     }

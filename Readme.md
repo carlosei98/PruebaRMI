@@ -7,5 +7,5 @@ Para ello, se han creado dos submódulos:
     - El segundo, RMIServer, es el que provee la lógica necesaria para realizar la acción, en 
           en este caso, generar un número aleatorio entre 0 y 2^32-1.
           
-El método que genera el número aleatorio está en la clase InterfazRemota_Impl dentro del módulo
+El método que genera el número aleatorio está en la clase com.erena.RMIServer.InterfazRemota_Impl dentro del módulo
 RMIServer.
